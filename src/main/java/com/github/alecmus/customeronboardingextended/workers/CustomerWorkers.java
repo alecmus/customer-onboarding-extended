@@ -13,7 +13,7 @@ import java.io.IOException;
 @Component
 public class CustomerWorkers {
 
-    Logger logger = LoggerFactory.getLogger(CustomerWorkers.class);
+    private static Logger logger = LoggerFactory.getLogger(CustomerWorkers.class);
 
     // TODO: This should be of course injected and depends on the environment.
     // Hard coded for now
