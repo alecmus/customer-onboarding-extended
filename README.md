@@ -1,2 +1,2 @@
-# customer-onboarding-extended
-Customer Onboarding Process - Extended
+# Customer Onboarding - Extended
+Customer Onboarding Process
