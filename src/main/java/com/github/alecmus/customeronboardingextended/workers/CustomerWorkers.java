@@ -1,6 +1,7 @@
 package com.github.alecmus.customeronboardingextended.workers;
 
 import io.camunda.zeebe.client.api.response.ActivatedJob;
+import io.camunda.zeebe.client.api.worker.JobClient;
 import io.camunda.zeebe.spring.client.annotation.JobWorker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,13 +45,15 @@ public class CustomerWorkers {
     @JobWorker(type="provisionSIM")
     public void provisionSimCard() {
         logger.info("Provisioning SIM card...");
-        //if (true) {
-        //throw new RuntimeException("CANOT CONNECT TO SIM CARD SYSTEM. OH NOOOOOO.");
-        //}
     }
 
     @JobWorker(type="registerSIM")
     public void registerSimCard() {
         logger.info("Registering SIM card...");
+    }
+
+    @JobWorker(type = "scoreCustomer")
+    public void scoreCustomer(final JobClient client, final ActivatedJob job) throws IOException {
+        logger.info("score...");
     }
 }
